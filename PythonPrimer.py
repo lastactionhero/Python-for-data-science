@@ -140,3 +140,25 @@ magic(1, 2, key="word", key2="word2")
 
 
 # %%
+#Understand map function
+def cube(num):
+    """
+    It returns cube of number
+    """
+    return num**3
+
+lst =list(range(0,10))
+print(len(lst))
+#try to get cube of every number in list using cube function
+result = [cube(num) for num in lst]
+print(result)
+#use map
+mapresult = list(map(cube,lst))
+print(mapresult)
+#Use lambda expression with map
+lambdaresult = list(map(lambda num:num**3, lst))
+print(lambdaresult)
+#filter 
+filtered = list(filter(lambda num:num%2==0, lst))
+print(filtered)
+# %%
