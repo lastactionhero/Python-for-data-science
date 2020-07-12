@@ -124,3 +124,6 @@ arr.sum(axis=0)
 arr.sum(axis=1)
 
 # %%
+arr.sum()
+
+# %%
