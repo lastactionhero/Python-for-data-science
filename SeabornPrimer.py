@@ -1,6 +1,6 @@
 #%%
 import seaborn as sns
-
+import numpy as np
 # %%
 tips= sns.load_dataset('tips')
 tips.head(20)
@@ -23,7 +23,71 @@ sns.jointplot(x='total_bill', y='tip', data=tips, kind='kde')
 
 # %%
 #Pairplot - this plot takes all dataset and plot pair of numerical columns against each other
-sns.pairplot(tips)
+sns.pairplot(tips,hue='sex')
 
+
+# %% 
+sns.rugplot(tips["total_bill"])                    
+
+
+# %%
+# Categorical plots
+#default average/mean values per group shown
+sns.barplot(x='sex',y='total_bill',data=tips)
+#%%
+#estimator can affect grouping
+sns.barplot(x='sex',y='total_bill',data=tips,estimator=np.std)
+
+# %%
+#count plt
+sns.countplot(x='sex', data = tips)
+
+# %%
+sns.boxplot(x='day',y='total_bill', data=tips, hue='smoker')
+
+# %%
+#Violinplot - they are same as box plot but say more infomration 
+sns.violinplot(x='day',y='total_bill', data=tips)
+
+# %%
+sns.violinplot(x='day',y='total_bill', data=tips, hue='sex', split=True)
+
+# %%
+sns.boxplot(x='day',y='total_bill',data=tips, hue='sex')
+
+# %%
+sns.stripplot(x='day', y='total_bill', data=tips)
+# %%
+sns.stripplot(x='day', y='total_bill', data=tips, jitter=True)
+
+# %%
+sns.stripplot(x='day', y='total_bill', data=tips, hue='sex',jitter=True)
+
+# %%
+sns.swarmplot(x='day', y='total_bill', data=tips)
+# %%
+sns.swarmplot(x='day', y='total_bill', data=tips, hue='sex')
+
+# %%
+sns.violinplot(x='day', y='total_bill', data=tips)
+sns.swarmplot(x='day', y='total_bill', data=tips, color='black')
+
+# %%
+sns.factorplot(x='day', y='total_bill', data=tips, kind='bar')
+
+#%%
+g = sns.catplot(x="sex", y="total_bill",
+            hue="smoker", col="time",
+                data=tips, kind="box",
+                height=4, aspect=.7)
+# %%
+flights = sns.load_dataset('flights')
+flights.head()
+# %%
+# Heatmap
+tips.corr()
+
+# %%
+sns.heatmap(tips.corr())
 
 # %%

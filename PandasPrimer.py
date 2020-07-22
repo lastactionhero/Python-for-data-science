@@ -113,6 +113,8 @@ df
 # %%
 df.groupby(by='City').sum()
 
+#%%
+df.groupby("City").agg({"PurchaseAmount":pd.Series.unique})
 # %%
 df.groupby(by='City').describe()
 
