@@ -1,14 +1,14 @@
 #%%
 import seaborn as sns
 import numpy as np
-# %%
+# %% [markdown]
 tips= sns.load_dataset('tips')
 tips.head(20)
 # %%
-# distribution plot
+# ##distribution plot
 sns.distplot(tips['total_bill'])
 
-# %%
+# %% [markdown]
 #joint graph
 sns.jointplot(x='total_bill', y='tip', data=tips)
 
@@ -83,11 +83,16 @@ g = sns.catplot(x="sex", y="total_bill",
 # %%
 flights = sns.load_dataset('flights')
 flights.head()
+#%% Pivot table
+pivt = flights.pivot_table(index="month", columns="year", values="passengers")
 # %%
-# Heatmap
-tips.corr()
+sns.heatmap(pivt)
 
 # %%
-sns.heatmap(tips.corr())
+sns.clustermap(pivt)
+
+# %% We may need to normalize scale to better understand clusters
+sns.clustermap(pivt, standard_scale=1)
+
 
 # %%
