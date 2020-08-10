@@ -1,6 +1,7 @@
 #%%
 import seaborn as sns
 import numpy as np
+import matplotlib.pyplot as plt
 # %% [markdown]
 tips= sns.load_dataset('tips')
 tips.head(20)
@@ -89,6 +90,7 @@ pivt = flights.pivot_table(index="month", columns="year", values="passengers")
 sns.heatmap(pivt)
 
 # %%
+plt.figure(figsize=(12,6))
 sns.clustermap(pivt)
 
 # %% We may need to normalize scale to better understand clusters
