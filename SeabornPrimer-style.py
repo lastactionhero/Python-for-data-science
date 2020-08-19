@@ -17,6 +17,7 @@ sns.barplot(data=tips, x='sex',y='total_bill')
 
 # %%
 sns.set_style('darkgrid')
+sns.set_palette('inferno')
 sns.barplot(data=tips, x='sex',y='total_bill')
 
 # %%
