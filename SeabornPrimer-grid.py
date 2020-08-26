@@ -43,3 +43,6 @@ g=sns.FacetGrid(data=tips, col='time', row='smoker')
 g.map(sns.scatterplot,'total_bill','tip')
 
 # %%
+# adjust size of plots 
+g=sns.FacetGrid(data=tips, col='time', row='smoker', size = 5)
+g.map(sns.scatterplot,'total_bill','tip')
