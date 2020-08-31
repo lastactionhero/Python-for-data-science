@@ -74,3 +74,21 @@ similar_starwars = similar_starwars.join(ratings)
 # %%
 similar_starwars[similar_starwars['num of ratings']>100].sort_values(by='corr', ascending=False)
 # %%
+# do same changes for liar liar movie
+similar_liar = moviemat.corrwith(liar)
+#%%
+similar_liar
+# %%
+#create data frame for simplicity out of above scores
+similar_liar =  pd.DataFrame(similar_liar, columns=['corr liar'])
+# %%
+similar_liar.head()
+# %%
+# join with movie mat
+similar_liar=similar_liar.join(ratings)
+# %%
+similar_liar[similar_liar['num of ratings'] > 100 ] \
+    .sort_values(by='corr liar', ascending=False) \
+        .head(10)
+
+# %%
