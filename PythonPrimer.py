@@ -162,3 +162,8 @@ print(lambdaresult)
 filtered = list(filter(lambda num:num%2==0, lst))
 print(filtered)
 # %%
+# reverse string 
+rev = lambda str: str[::-1]
+# %%
+rev('abcd')
+# %%
