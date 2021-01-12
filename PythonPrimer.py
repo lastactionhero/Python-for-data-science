@@ -1,5 +1,5 @@
 #basic of loop
-#%%
+#%% 
 for i in [1,2,3,4]:
     print(i)
 #formating example
