@@ -7,7 +7,6 @@ firstName = "Jack"
 lastName = "Reacher"
 print(f"His is first name is {firstName}, and last name is {lastName}")
 print(r"His is first name is {firstName}, and last name is {lastName}")
-#%%
 #List 
 #%%
 intlist = [0,1,2,3,4,5,6,7,8,9]
@@ -21,6 +20,8 @@ print(f"Last 3 elements of list {intlist[-3:]} ") #read as -3 (third last) to en
 print(f"Sub list {intlist[2:6]} ") #read as  
 print(f"Sub list {intlist[::4]} ") #read as - take every 4th element from the entire list 
 print(f"Sub list {intlist[:6:2]} ") #read as  - take every 2nd element from the list [0,6)
+name = 'Jitendra'
+print(f"Reverse name - {name[::-1]}")
 #%%
 x,y = [10,20]
 print(f"x={x}, y={y}") #unpack list to finite elements

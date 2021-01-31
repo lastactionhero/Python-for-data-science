@@ -4,11 +4,11 @@ import pandas as pd
 import seaborn as sns
 # %%
 column_names = ['user_id', 'item_id', 'rating', 'timestamp']
-df = pd.read_csv('u.data', sep='\t', names=column_names)
+df = pd.read_csv(r'C:\Jitendra\Data Science Study\Python-for-data-science\MachineLearning\RecommenderSystem\u.data', sep='\t', names=column_names)
 # %%
 df.head()
 # %%
-movie_titles= pd.read_csv('Movie_Id_Titles')
+movie_titles= pd.read_csv(r'C:\Jitendra\Data Science Study\Python-for-data-science\MachineLearning\RecommenderSystem\Movie_Id_Titles')
 #%%
 movie_titles.head()
 # %%
