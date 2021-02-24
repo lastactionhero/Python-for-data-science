@@ -21,6 +21,7 @@ plt.plot(y,x,'g')
 fig=plt.figure()
 axes = fig.add_axes([0.8,0.8,0.8,0.8])
 axes.plot(x,y,'g')
+axes.plot(y,x,'r')
 axes.set_xlabel('X Label')
 axes.set_ylabel('Y Label')
 

@@ -122,6 +122,11 @@ df.groupby(by='City').describe()
 df = pd.DataFrame({'col1':[1,2,3,4],'col2':[444,555,666,444],'col3':['abc','def','ghi','xyz']})
 df.head()
 
+#%%
+df.info()
+#%%
+# this is important to transpose. it makes data readable. 
+df.describe().transpose()
 # %%
 df[(df['col1']>2) & (df['col2']==444)]
 
