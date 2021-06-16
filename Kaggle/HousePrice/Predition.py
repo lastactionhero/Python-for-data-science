@@ -16,6 +16,10 @@ df.head()
 #%%
 df['MasVnrType']
 #%%
+
+df.isna().mean().round(4)*100 
+#%%
+
 # list null columns with more than one null value
 df[df.columns[df.isnull().any()]].isnull().sum()*100/1460
 #%%
